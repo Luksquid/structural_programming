@@ -5,5 +5,5 @@ int main()
 {
     float x;
     scanf("%f", &x);
-    printf("%d", abs(x));
+    printf("%d", fabs(x));
 }
