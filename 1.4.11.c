@@ -10,7 +10,7 @@ int main()
     {
         x++;
     }
-    while(fabs(a)*(x*x)+b*x+c<d);
+    while(fabs(a)*(x*x)+b*x+c<=d);
     printf("%i\n", x);
     x=0;
 
@@ -19,7 +19,7 @@ int main()
     {
         x++;
     }
-    while(5 *(x*x)+a*x+b>c);
+    while(5 *(x*x)+a*x+b>=c);
     printf("%i\n", x);
     x=0;
 
@@ -28,6 +28,6 @@ int main()
     {
         x++;
     }
-    while(5 *(x*x)+a*x+b>=c);
+    while(5 *(x*x)+a*x+b>c);
     printf("%i", x);
 }
