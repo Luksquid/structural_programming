@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+int i=0;
 void a()
-{
-    int i=0;
+{  
     i++;
     printf("%d", i);
 }
