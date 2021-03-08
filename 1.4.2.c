@@ -3,12 +3,12 @@
 
 int main()
 {
-    int a, b, wyn=0;
+    int m, n, wyn=0;
     printf("Liczby:\n");
-    scanf("%i %i", &a, &b);
-    for(int i = 1; i<=b; i++)
+    scanf("%i %i", &n, &m);
+    for(int i = 1; i<=m; i++)
     {
-        wyn = wyn + a;
+        wyn = wyn + n;
+        printf("%i\n", wyn);
     }
-    printf("%i", wyn);
 }
