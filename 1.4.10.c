@@ -7,10 +7,11 @@ int main()
     scanf("%i", &a);
     for(int i = 1; i<a; i++)
     {
-        if(i*i==a)
+        if(i*i<=a)
         {
             wyn=i;
         }
+
     }
     printf("%i", wyn);
 }
