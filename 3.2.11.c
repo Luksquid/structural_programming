@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-double* foo(int n)
+int* foo(int n)
 {
-    return malloc(n*sizeof(double));
+    return malloc(n*sizeof(int));
 }
 int main()
 {
