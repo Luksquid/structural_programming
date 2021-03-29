@@ -8,16 +8,19 @@ int foo(int n)
     }
     if(n%2==0)
     {
-        return foo(n-2) + n;
+        return foo(n/2-1) + n/2;
     }
     if(n%2==1)
     {
-        return 2 * foo(n-1) - 2 * n;
+        return 2 * foo(n-1) - (n-1);
     }
 }
 
 
 int main()
 {
-    printf("%d", foo(3));
+    for(int i = 0; i<=4;i++)
+    {
+        printf("%d\n", foo(i));
+    }
 }
