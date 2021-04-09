@@ -13,8 +13,8 @@ double foo(int n, double * tab1, double * tab2)
 
 int main()
 {
-    double *tab1 = malloc(2 * sizeof(double));
-    double *tab2 = malloc(2 * sizeof(double));
+    double *tab1 = malloc(3 * sizeof(double));
+    double *tab2 = malloc(3 * sizeof(double));
     *(tab1) = 5;
     *(tab1 + 1) = 2;
     *(tab1 + 2) = 4;
