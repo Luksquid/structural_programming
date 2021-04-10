@@ -96,7 +96,7 @@ void fooE(int n, int *tab)
 int main()
 {
     const int n = 6;
-    int *tab = malloc(4 * sizeof(int));
+    int *tab = malloc(n * sizeof(int));
     *(tab) = 5;
     *(tab + 1) = 2;
     *(tab + 2) = 9;
