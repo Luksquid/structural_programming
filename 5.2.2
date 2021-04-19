@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+int foo1(char *nap)
+{
+    int temp = 0;
+    while(*(nap++))
+    {
+        temp++;
+    }
+    return temp;
+}
+int foo2(wchar_t *nap)
+{
+    int temp = 0;
+    while(*(nap++))
+    {
+        temp++;
+    }
+    return temp;
+}
+
+int main()
+{
+    char napis[] = "lama";
+    wchar_t napis2[5] = L"lama";
+    printf("%d\n", foo1(&napis));
+    printf("%d", foo2(&napis2));
+}
