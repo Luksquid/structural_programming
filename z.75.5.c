@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-int* foo(int n, int tab1[], int tab2[])
+int foo(int n, int tab1[], int tab2[])
 {
-    int tb[2*n];
+    int *tb = malloc(2*n*sizeof(int));
     for(int i=0; i<n; i++)
     {
-        tb[i] = tab1[i];
-        tb[n+i] = tab2[i];
+        *(tb+i) = tab1[i];
+        *(tb+n+i) = tab2[i];
     }
     for(int i = 0; i<2*n;i++)
     {
@@ -16,12 +16,12 @@ int* foo(int n, int tab1[], int tab2[])
             int temp0 = tb[j-1];
             if(tb[j]>tb[j-1])
             {
-                tb[j] = temp0;
-                tb[j-1] = temp1;
+                *(tb+j) = temp0;
+                *(tb+j-1) = temp1;
             }
         }
     }
-    return *tb;
+    return tb;
 }
 int main()
 {
