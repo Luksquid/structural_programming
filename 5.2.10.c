@@ -3,27 +3,89 @@
 #include <wchar.h>
 void foo(char *nap1, char *nap2)
 {
-    int ind = 0;
-    for(int i=0; nap1[i]!=0; i++)
+    int t = 0;
+    int z = 0;
+    int t2 = 0;
+    while(nap1[t]!=0)
     {
-        if(nap1[i]==nap2[ind])
+        if(nap1[t] != nap2[z])
         {
-            nap1[i]=' ';
-            ind++;
+            t2++;
         }
+        else
+        {
+            z++;
+        }
+        t++;
     }
+    char * temp = malloc((1+t2)*sizeof(char));
+    temp[t2+1]='\0';
+    t = 0;
+    z = 0;
+    t2 = 0;
+    while(nap1[t]!=0)
+    {
+        if(nap1[t] != nap2[z])
+        {
+            temp[t2] = nap1[t];
+            t2++;
+        }
+        else
+        {
+            z++;
+        }
+        t++;
+    }
+    t=0;
+    while(temp[t]!=0)
+    {
+        nap1[t] = temp[t];
+        t++;
+    }
+    nap1[t-1]='\0';
 }
 void foo2(wchar_t *nap1, wchar_t *nap2)
 {
-    int ind = 0;
-    for(int i=0; nap1[i]!=0; i++)
+    int t = 0;
+    int z = 0;
+    int t2 = 0;
+    while(nap1[t]!=0)
     {
-        if(nap1[i]==nap2[ind])
+        if(nap1[t] != nap2[z])
         {
-            nap1[i]=' ';
-            ind++;
+            t2++;
         }
+        else
+        {
+            z++;
+        }
+        t++;
     }
+    wchar_t * temp = malloc((1+t2)*sizeof(wchar_t));
+    temp[t2+1]='\0';
+    t = 0;
+    z = 0;
+    t2 = 0;
+    while(nap1[t]!=0)
+    {
+        if(nap1[t] != nap2[z])
+        {
+            temp[t2] = nap1[t];
+            t2++;
+        }
+        else
+        {
+            z++;
+        }
+        t++;
+    }
+    t=0;
+    while(temp[t]!=0)
+    {
+        nap1[t] = temp[t];
+        t++;
+    }
+    nap1[t]='\0';
 }
 void wys(char *nap)
 {
@@ -46,9 +108,9 @@ void wys2(wchar_t *nap)
 int main()
 {
     char nap1[] = "Ala ma kota";
-    char nap2[] = "ma";
+    char nap2[] = "kota";
     wchar_t nap3[] = L"Ala ma kota";
-    wchar_t nap4[] = L"Ala";
+    wchar_t nap4[] = L"Alama";
     foo(&nap1, &nap2);
     foo2(&nap3, &nap4);
     wys(nap1);
